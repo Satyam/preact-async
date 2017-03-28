@@ -1,8 +1,9 @@
 import http from 'http';
 import { join } from 'path';
 import express from 'express';
-
 import denodeify from 'denodeify';
+
+import uwa from './uwa';
 
 if (process.env.NODE_ENV !== 'production') {
   /* eslint-disable import/no-extraneous-dependencies, global-require */
@@ -32,6 +33,8 @@ app.get('/kill', (req, res) => {
   close();
   process.exit();
 });
+
+app.get('/ssr', uwa);
 
 app.get('*', (req, res) => res.sendFile(absPath('webServer/index.html')));
 

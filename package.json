@@ -38,7 +38,8 @@
     "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
-    "preact": "file:///home/satyam/preact"
+    "preact": "file:///home/satyam/preact",
+    "preact-render-to-string": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
