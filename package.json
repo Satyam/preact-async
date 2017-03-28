@@ -1,0 +1,58 @@
+{
+  "name": "preact-async",
+  "version": "1.0.0",
+  "description": "Samples of usage of suggested async rendering feature",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bundles/webServer.js",
+    "lint": "eslint --ext .jsx,.js . || exit 0",
+    "build": "webpack -d --config webpack.config/development.js",
+    "watch": "webpack -d --config webpack.config/development.js --watch &",
+    "production": "webpack -p --config webpack.config/production.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "u": "npm i -S ../preact && touch webClient/index.jsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satyam/preact-async.git"
+  },
+  "keywords": [
+    "PReact",
+    "async",
+    "server-side-rendering"
+  ],
+  "author": "Daniel Barreiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Satyam/preact-async/issues"
+  },
+  "homepage": "https://github.com/Satyam/preact-async#readme",
+  "myWebServer": {
+    "port": 8080,
+    "host": "http://localhost"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "denodeify": "^1.2.1",
+    "express": "^4.15.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "preact": "file:///home/satyam/preact"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "webpack": "^2.3.2"
+  }
+}
