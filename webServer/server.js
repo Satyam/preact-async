@@ -4,6 +4,7 @@ import express from 'express';
 import denodeify from 'denodeify';
 
 import uwa from './uwa';
+import qq from './qq';
 
 if (process.env.NODE_ENV !== 'production') {
   /* eslint-disable import/no-extraneous-dependencies, global-require */
@@ -35,6 +36,7 @@ app.get('/kill', (req, res) => {
 });
 
 app.get('/ssr', uwa);
+app.get('/qq', qq);
 
 app.get('*', (req, res) => res.sendFile(absPath('webServer/index.html')));
 

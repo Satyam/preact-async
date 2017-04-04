@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node bundles/webServer.js",
+    "start:debug": "node --inspect --debug-brk bundles/webServer.js",
     "lint": "eslint --ext .jsx,.js . || exit 0",
     "build": "webpack -d --config webpack.config/development.js",
     "watch": "webpack -d --config webpack.config/development.js --watch &",
     "production": "webpack -p --config webpack.config/production.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "u": "npm i -S ../preact && touch webClient/index.jsx"
+    "u": "npm i -S ../preact-render-to-string && touch webClient/index.jsx"
   },
   "repository": {
     "type": "git",
@@ -38,8 +39,12 @@
     "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
-    "preact": "file:///home/satyam/preact",
-    "preact-render-to-string": "^3.6.0"
+    "preact": "^7.2.1",
+    "preact-redux": "^2.0.1",
+    "preact-render-to-string": "file:///home/satyam/preact-render-to-string",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

@@ -11,6 +11,8 @@ module.exports = version => [
 ].map((bundle) => {
   const aliases = {
     _client: absPath('client'),
+    _store: absPath('client/store'),
+    _components: absPath('client/components'),
     _server: absPath('server'),
     _utils: absPath('client/utils'),
   };

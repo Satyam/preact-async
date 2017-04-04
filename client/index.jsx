@@ -1,17 +1,12 @@
 /** @jsx h */
 import { h } from 'preact';
 
-import CodeSplit from '_client/codeSplit';
-import DataLoading from '_client/dataLoading';
+import Person from '_components/person';
 
 export default function () {
-  return (
-    <div className="index-jsx">
-      <h1>Code Splitting</h1>
-      <CodeSplit />
-      <hr />
-      <h1>Data Loading</h1>
-      <DataLoading file="data1" />
-    </div>
-  );
+  return (<div>
+    <h1>Nice people</h1>
+    <Person idPerson={1} />
+    <Person idPerson={2} />
+  </div>);
 }
