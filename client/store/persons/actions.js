@@ -37,7 +37,7 @@ export function getPersonById(idPerson) {
       ? response.json()
       : Promise.reject(response.statusText)
     ))
-    .then(data => dispatch({
+    .then(data => void dispatch({
       type: GET_PERSON_BY_ID,
       stage: REPLY_STAGE,
       payload: data,
