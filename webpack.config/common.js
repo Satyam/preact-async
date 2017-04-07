@@ -15,6 +15,8 @@ module.exports = version => [
     _components: absPath('client/components'),
     _server: absPath('server'),
     _utils: absPath('client/utils'),
+    react: 'preact-compat',
+    'react-dom': 'preact-compat',
   };
   return {
     entry: {

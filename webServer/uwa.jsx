@@ -1,5 +1,4 @@
-/** @jsx h */
-import { h } from 'preact';
+import React from 'react';
 import { asyncRender } from 'preact-render-to-string';
 import { Provider } from 'preact-redux';
 
