@@ -5,17 +5,6 @@ import denodeify from 'denodeify';
 
 import uwa from './uwa';
 
-if (process.env.NODE_ENV !== 'production') {
-  /* eslint-disable import/no-extraneous-dependencies, global-require */
-  global.Promise = require('bluebird');
-  /* eslint-enable import/no-extraneous-dependencies, global-require */
-
-  Promise.config({
-    longStackTraces: true,
-    warnings: true, // note, run node with --trace-warnings to see full stack traces for warnings
-  });
-}
-
 const absPath = relPath => join(ROOT_DIR, relPath);
 
 const app = express();
