@@ -12,7 +12,9 @@ export default function dataRequest(actionType, request, payload) {
       payload,
     });
     return request
+    /* eslint-disable no-void */
     .then(data => void dispatch({
+      /* eslint-enable no-void */
       type: actionType,
       stage: REPLY_STAGE,
       payload: Object.assign({}, payload, data),

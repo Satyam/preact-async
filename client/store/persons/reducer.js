@@ -17,7 +17,10 @@ export default (
           return Object.assign({}, state, {
             [action.payload.idPerson]: action.payload,
           });
+        default:
+          return state;
       }
+    default:
+      return state;
   }
-  return state;
 };
