@@ -23,7 +23,7 @@ app.get('/kill', (req, res) => {
   process.exit();
 });
 
-app.get('/ssr', uwa);
+app.use(uwa);
 
 app.get('*', (req, res) => res.sendFile(absPath('webServer/index.html')));
 

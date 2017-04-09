@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h, render } from 'preact';
 import { Provider } from 'preact-redux';
-
+import { BrowserRouter } from 'react-router-dom';
 import Client from '_client';
 import createStore from '_store/createStore';
 
@@ -16,7 +16,9 @@ const dest = document.getElementById('contents');
 const store = createStore(initialState);
 render(
   <Provider store={store}>
-    <Client />
+    <BrowserRouter>
+      <Client />
+    </BrowserRouter>
   </Provider>,
   dest,
   dest.firstChild,

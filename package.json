@@ -37,11 +37,13 @@
     "denodeify": "^1.2.1",
     "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
     "preact": "^7.2.1",
     "preact-compat": "^3.14.3",
     "preact-redux": "^2.0.1",
     "preact-render-to-string": "file:///home/satyam/preact-render-to-string",
     "react-redux": "^5.0.3",
+    "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   },

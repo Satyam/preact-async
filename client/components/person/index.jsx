@@ -9,19 +9,19 @@ import { item } from '_store/persons/selectors';
 
 export class PersonComponent extends Component {
   componentWillMount() {
-    const { dispatch, idPerson } = this.props;
-    return dispatch(getPersonById(idPerson));
+    const { dispatch, match } = this.props;
+    return dispatch(getPersonById(match.params.idPerson));
   }
-  componentWillReceiveProps({ dispatch, idPerson }) {
-    return dispatch(getPersonById(idPerson));
+  componentWillReceiveProps({ dispatch, match }) {
+    return dispatch(getPersonById(match.params.idPerson));
   }
-  render({ name }) {
+  render({ name, drives }) {
     return (
-      <p>Hello {name}!</p>
+      <p>Hello {name}, I like your {drives}!</p>
     );
   }
 }
 
 export default connect(
-  (state, props) => item(state, props.idPerson)
+  (state, props) => item(state, props.match.params.idPerson)
 )(PersonComponent);

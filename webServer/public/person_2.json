@@ -1,4 +1,5 @@
 {
   "idPerson": 2,
-  "name": "John"
+  "name": "John",
+  "drives": "Honda"
 }
